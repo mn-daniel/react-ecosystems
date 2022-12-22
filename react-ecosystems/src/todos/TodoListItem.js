@@ -1,6 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
+export const getBorderStyleForDate = (startingDate, currentDate) =>
+    (startingDate > new Date(currentDate - 86400000 * 5)
+    ? 'none'
+    : '2px solid red');
+
 const TodoItemContainer = styled.div`
     background: #fff;
     border-radius: 8px;
